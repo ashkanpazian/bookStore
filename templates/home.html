@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    home page
+{% endblock %}
+
+
+{% block content %}
+   <h1>home page</h1>
+     {% if user.is_authenticated %}
+
+                <P>خوش آمدید  {{ user.username }}     <a class="btn-default" href="{% url 'logout' %}"> خروج </a> </P>
+                {% else %}
+                <a class="btn-default" href="{% url 'login' %}">ورود</a>
+                 <a class="btn-default" href="{% url 'signup' %}"> | ثبت نام  </a>
+            {% endif %}
+
+{% endblock content %}
