@@ -13,44 +13,13 @@
     <title>{% block page_title %}{% endblock page_title %}</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Ashkan project</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-{#                <a class="nav-link active" href="{% url 'posts_list' %}">بلاگ</a>#}
-{#                <a class="nav-link" href="{% url 'add_post' %}">پست جدید</a>#}
-            </div>
-        </div>
-        <div class="mx-2 text-white">
-{#            {% if user.is_authenticated %}#}
-{#        	    {{ user.username }} خوش آمدید#}
-{#                <P><a class="btn-outline-light" href="{% url 'logout' %}"> خروج </a></P>#}
-{#                {% else %}#}
-{#                <a class="text-light" href="{% url 'login' %}">LogIn</a>#}
-{#                 <a class="text-light" href="{% url 'signup' %}"> |sginup </a>#}
-{#            {% endif %}#}
-        </div>
-    </div>
-</nav>
 
-<div class="container-fluid bg-info">
-    <div class="row py-3">
-        <div class="col-md-8 col-md-10 mx-auto">
-            <h3 class="my-4 mt-3 text-white">به پروژه فاکتور های فرداد طب مهام خوش آمدید</h3>
-            <p class="text-light">لطفا نظرات خود رو بنویسید</p>
-        </div>
-    </div>
+
+<div class="container">
+    {% block content %}
+
+    {% endblock content %}
 </div>
-
-
-{% block content %}
-
-{% endblock content %}
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
