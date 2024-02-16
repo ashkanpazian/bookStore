@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
     "crispy_forms",
     "crispy_bootstrap5",
+    "books.apps.BooksConfig"
 
 ]
 
@@ -104,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -138,3 +138,4 @@ LOGOUT_REDIRECT_URL ='home'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+Email_BACKEND = 'django.core.mail.backends.console'
