@@ -142,3 +142,6 @@ Email_BACKEND = 'django.core.mail.backends.console'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+
+MEDIA_URL ='/media/'
+MEDIA_DIRS = [str(BASE_DIR.joinpath('media'))]
